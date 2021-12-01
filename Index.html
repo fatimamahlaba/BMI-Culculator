@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Recorder</title>
+    <title>BMI INDICATOR</title>
 </head>
-<style>
 
-</style>
-
-<body>
     <style media="screen">
 		body{
             background-color: white;
@@ -21,7 +17,32 @@
 			background-image: rgb(0, 0, 0);
 			min-height: 100vh;
 		}
-		div{
+		
+		h2{
+            border: 3px solid black;
+            border-radius: 20%;
+			font-size: 30px;
+            background-color: floralwhite;
+			font-weight: 620;
+		}
+		.text{
+			text-align: left;
+			margin-left: 150px;
+		}
+		#infomation{
+				font-size: 12px;
+				font-family: sans-serif;
+			}
+		#w, #h{
+            border: 1px solid black;
+			color: #151616;
+			text-align: left;
+			font-size: 20px;
+			font-weight: 210;
+			outline: none;
+			width: 200px;
+		}
+		.box{
 			width: 600px;
 			position: absolute;
 			top: 50%;
@@ -31,26 +52,6 @@
 			padding: 20px;
 			border-radius: 10px;
 			
-		}
-		h2{
-            border: 3px solid black;
-            border-radius: 50%;
-			font-size: 30px;
-            background-color: floralwhite;
-			font-weight: 620;
-		}
-		.text{
-			text-align: left;
-			margin-left: 150px;
-		}
-		#w, #h{
-            border: 1px solid black;
-			color: #151616;
-			text-align: left;
-			font-size: 20px;
-			font-weight: 210;
-			outline: none;
-			width: 200px;
 		}
 			#w:focus, #h:focus{
 				border-bottom: 2px solid #000000;
@@ -73,29 +74,41 @@
 				cursor: pointer;
 			}
 		
-			#infomation{
-				font-size: 12px;
-				font-family: sans-serif;
-			}
+			
+			#btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
 	</style>
 	<body>
-		<div>
-
-
-
-
-            
+		
+		<div class="box">
 			<h2>BMI Calculator</h2>
-			<p class="text">Height</p>
+			<p class="text">Your Height</p>
 			<input type="text" id="h">
-			<p class="text">Weight</p>
+			<p class="text">Your Weight</p>
 			<input type="text" id="w">
 			<p id="result"></p>
-			<button id="btns" onClick="BMI()">Calculate</button>
-			<p id="info">Enter height [cm] and weight [kg]</p>
+			
+				<p>Please select your Gender:</p>
+			    <input type="radio" id="gender" name="gender" value="female">
+			    <label for="html">FEMALE</label><br>
+			    <input type="radio" id="gender" name="gender" value="male">
+			    <label for="css">MALE</label><br>
+			<button id="btns" onclick="BMI()">Calculate</button>
+			<p>Your answer here:</p>
+			<div id="display" class="answer" style="border: 1px solid black; width: 33%;height: 25px;margin-left: 200px; background-color: white;">
+			<p  style="margin-bottom: 160px;"></p></div>
+			<p id="info">Enter height [cm] and weight [kg]</p> 
+			<button id="btn"><a href="/BMI/Temp.html">Please Click To Go To Temperature</a></button>
 		</div>
-        <script src="/final-portfolio/BMI/Bmi.js"></script>
-	</body>
+		
+        <script src="/BMI/Bmi.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-
 </html>
